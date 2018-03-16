@@ -11,7 +11,7 @@ import java.util.Map;
 /**
  * @author mindawei
  * @date 2018/3/15
- * <p>
+ *
  * https://github.com/google/guava/wiki/StringsExplained#joiner
  */
 public class TestJoiner {

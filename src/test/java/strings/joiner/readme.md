@@ -1,3 +1,6 @@
+[Joiner](http://google.github.io/guava/releases/snapshot/api/docs/com/google/common/base/Joiner.html)
+---
+ 
 # 使用示例
 以下参考：[官方文档](https://github.com/google/guava/wiki/StringsExplained#joiner)。
 
