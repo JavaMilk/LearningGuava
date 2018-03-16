@@ -51,7 +51,7 @@ Splitter.on(',')
 ## Splitter.MapSplitter
 以下参考：[Guava 是个风火轮之基础工具(2)](http://www.importnew.com/15227.html)。
 
-过 `Splitter` 的 `withKeyValueSeparator` 方法可以获得 `MapSplitter` 对象。 `MapSplitter` 是 `Splitter` 的内部类，需要表示成 `Joiner.MapJoiner`。
+通过 `Splitter` 的 `withKeyValueSeparator` 方法可以获得 `Joiner.MapJoiner` 对象。
 
 `MapSpliter` 只有一个公共方法，如下所示。可以看到返回的对象是 `Map<String, String>`。
 ```
@@ -92,12 +92,12 @@ Splitter.on("#").withKeyValueSeparator(":").split("1:2#3:4:5");
   }
 ```
 
-每个工厂函数创建最后都需要去调用基本的私有函数：
+每个工厂函数创建最后都需要去调用基本的私有构造函数。这个创建过程中，主要是提供一个可以创建 `Iterator<String>` 的 `Strategy`。
 ```
   private Splitter(Strategy strategy, boolean omitEmptyStrings, CharMatcher trimmer, int limit)；
 ```
 
-这个创建过程中，最基本的部分就是实现一个 `Strategy` 中的 `Iterator<String>`。以 `Splitter on(final CharMatcher separatorMatcher)` 创建函数为例：
+以 `Splitter on(final CharMatcher separatorMatcher)` 创建函数为例，这里返回的是 `SplittingIterator` (它是个抽象类，继承了 `AbstractIterator`，而 `AbstractIterator` 继承了 `Iterator`）。
 ```
   public static Splitter on(final CharMatcher separatorMatcher) {
     checkNotNull(separatorMatcher);
@@ -121,7 +121,7 @@ Splitter.on("#").withKeyValueSeparator(":").split("1:2#3:4:5");
   }
 ```
 
-这里返回的是 `SplittingIterator` (它是个抽象类，继承了 `AbstractIterator`，而 `AbstractIterator` 继承了 `Iterator`），需要覆盖实现 `separatorStart` 和 `separatorEnd` 两个方法才能实例化。这两个方法是 `SplittingIterator` 用到的模板模式的重要组成。
+`SplittingIterator` 需要覆盖实现 `separatorStart` 和 `separatorEnd` 两个方法才能实例化。这两个方法也是 `SplittingIterator` 用到的模板模式的重要组成。
 
 ## 惰性迭代器与模板模式
 [惰性计算](https://baike.baidu.com/item/%E6%83%B0%E6%80%A7%E8%AE%A1%E7%AE%97/3081216)目的是要最小化计算机要做的工作，即把计算推迟到不得不算的时候进行。Java中的惰性计算可以参考[《你应该更新的 Java 知识之惰性求值：Supplier 和 Guava》](https://my.oschina.net/bairrfhoinn/blog/142985)。
@@ -199,10 +199,8 @@ private boolean tryToComputeNext() {
 ```
   @Override
     protected String computeNext() {
-      /*
-	   * 返回的字符串介于上一个分隔符和下一个分隔符之间。
-	   * nextStart 是返回子串的起始位置，offset 是下次开启寻找分隔符的地方。 
-       */
+      // 返回的字符串介于上一个分隔符和下一个分隔符之间。
+	  // nextStart 是返回子串的起始位置，offset 是下次开启寻找分隔符的地方。 
       int nextStart = offset;
       while (offset != -1) {
         int start = nextStart;
@@ -222,12 +220,10 @@ private boolean tryToComputeNext() {
 		
 		// 处理的是第一个字符就是分隔符的特殊情况
         if (offset == nextStart) {
-          /*
-		   * 发生情况：空字符串 或者 整个字符串都没有匹配。
-           * offset 需要增加来寻找这个位置之后的分隔符，
-		   * 但是没有改变接下来返回字符串的 start 的位置，
-		   * 所以此时它们二者相同。
-           */
+          // 发生情况：空字符串 或者 整个字符串都没有匹配。
+          // offset 需要增加来寻找这个位置之后的分隔符，
+		  // 但是没有改变接下来返回字符串的 start 的位置，
+		  // 所以此时它们二者相同。
           offset++;
           if (offset > toSplit.length()) {
             offset = -1;
