@@ -250,7 +250,7 @@ private boolean tryToComputeNext() {
         if (limit == 1) {
           // The limit has been reached, return the rest of the string as the
           // final item. This is tested after empty string removal so that
-          // empty strings do not count towards the limit.
+          // empty Strings do not count towards the limit.
           end = toSplit.length();
 		  // 调整 end 指针的位置标记 offset 为 -1，下一次再调用 computeNext 
 		  // 的时候就发现 offset 已经是 -1 了，然后就返回 endOfData 表示迭代结束。

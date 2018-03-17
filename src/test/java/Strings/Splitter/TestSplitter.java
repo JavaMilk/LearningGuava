@@ -1,9 +1,8 @@
-package strings.splitter;
+package Strings.Splitter;
 
 import com.google.common.base.CharMatcher;
 import com.google.common.base.Joiner;
 import com.google.common.base.Splitter;
-import junit.framework.AssertionFailedError;
 import org.junit.Assert;
 import org.junit.Test;
 
