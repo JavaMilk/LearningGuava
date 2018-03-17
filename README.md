@@ -19,7 +19,7 @@
 
 # 已完成部分
 # String 
-* [Joiner](https://github.com/mindawei/JavaMilk/tree/master/src/test/java/strings/joiner) 感谢 [mindawei](https://github.com/mindawei)
-* [Splitter](https://github.com/mindawei/JavaMilk/tree/master/src/test/java/strings/splitter) 感谢 [mindawei](https://github.com/mindawei)
+* [Joiner](https://github.com/JavaMilk/LearningGuava/tree/master/src/test/java/strings/joiner) 感谢 [mindawei](https://github.com/mindawei)
+* [Splitter](https://github.com/JavaMilk/LearningGuava/tree/master/src/test/java/strings/splitter) 感谢 [mindawei](https://github.com/mindawei)
 
 
