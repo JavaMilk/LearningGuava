@@ -15,12 +15,11 @@
 * readme.md 文件中主要是 翻译官方文档的示例，以及加上一些源码分析（参考别人的部分指明出处）。
 
 # 文档认领列表
-----
-空
+ [mindawei](https://github.com/mindawei) 认领 String 下 CharMatcher
 
 # 已完成部分
 # String 
-* [Joiner](https://github.com/mindawei/guava-demo/tree/master/src/test/java/strings/joiner) 感谢 [mindawei](https://github.com/mindawei)
-* [Splitter](https://github.com/mindawei/guava-demo/tree/master/src/test/java/strings/splitter) 感谢 [mindawei](https://github.com/mindawei)
+* [Joiner](https://github.com/mindawei/JavaMilk/tree/master/src/test/java/strings/joiner) 感谢 [mindawei](https://github.com/mindawei)
+* [Splitter](https://github.com/mindawei/JavaMilk/tree/master/src/test/java/strings/splitter) 感谢 [mindawei](https://github.com/mindawei)
 
 
