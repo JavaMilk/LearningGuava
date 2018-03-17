@@ -33,30 +33,30 @@
 
 ## 创建 CharMatcher
 很多需求都可以被 `CharMatcher ` 的工厂方法满足：
-* [any()](http://google.github.io/guava/releases/snapshot/api/docs/com/google/common/base/CharMatcher.html#any--)
-* [none()](http://google.github.io/guava/releases/snapshot/api/docs/com/google/common/base/CharMatcher.html#none--)
-* [whitespace()](http://google.github.io/guava/releases/snapshot/api/docs/com/google/common/base/CharMatcher.html#whitespace--)
-* [breakingWhitespace()](http://google.github.io/guava/releases/snapshot/api/docs/com/google/common/base/CharMatcher.html#breakingWhitespace--)
-* [invisible()](http://google.github.io/guava/releases/snapshot/api/docs/com/google/common/base/CharMatcher.html#invisible--)
-* [digit()](http://google.github.io/guava/releases/snapshot/api/docs/com/google/common/base/CharMatcher.html#digit--)
-* [javaLetter()](http://google.github.io/guava/releases/snapshot/api/docs/com/google/common/base/CharMatcher.html#javaLetter--)
-* [javaDigit()](http://google.github.io/guava/releases/snapshot/api/docs/com/google/common/base/CharMatcher.html#javaDigit--)
-* [javaLetterOrDigit()](http://google.github.io/guava/releases/snapshot/api/docs/com/google/common/base/CharMatcher.html#javaLetterOrDigit--)
-* [javaIsoControl()](http://google.github.io/guava/releases/snapshot/api/docs/com/google/common/base/CharMatcher.html#javaIsoControl--)
-* [javaLowerCase()](http://google.github.io/guava/releases/snapshot/api/docs/com/google/common/base/CharMatcher.html#javaLowerCase--)
-* [javaUpperCase()](http://google.github.io/guava/releases/snapshot/api/docs/com/google/common/base/CharMatcher.html#javaUpperCase--)
-* [ascii()](http://google.github.io/guava/releases/snapshot/api/docs/com/google/common/base/CharMatcher.html#ascii--)
-* [singleWidth()](http://google.github.io/guava/releases/snapshot/api/docs/com/google/common/base/CharMatcher.html#singleWidth--)
+* [`any()`](http://google.github.io/guava/releases/snapshot/api/docs/com/google/common/base/CharMatcher.html#any--)
+* [`none()`](http://google.github.io/guava/releases/snapshot/api/docs/com/google/common/base/CharMatcher.html#none--)
+* [`whitespace()`](http://google.github.io/guava/releases/snapshot/api/docs/com/google/common/base/CharMatcher.html#whitespace--)
+* [`breakingWhitespace()`](http://google.github.io/guava/releases/snapshot/api/docs/com/google/common/base/CharMatcher.html#breakingWhitespace--)
+* [`invisible()`](http://google.github.io/guava/releases/snapshot/api/docs/com/google/common/base/CharMatcher.html#invisible--)
+* [`digit()](http://google.github.io/guava/releases/snapshot/api/docs/com/google/common/base/CharMatcher.html#digit--)
+* [`javaLetter()`](http://google.github.io/guava/releases/snapshot/api/docs/com/google/common/base/CharMatcher.html#javaLetter--)
+* [`javaDigit()](http://google.github.io/guava/releases/snapshot/api/docs/com/google/common/base/CharMatcher.html#javaDigit--)
+* [`javaLetterOrDigit()`](http://google.github.io/guava/releases/snapshot/api/docs/com/google/common/base/CharMatcher.html#javaLetterOrDigit--)
+* [`javaIsoControl()`](http://google.github.io/guava/releases/snapshot/api/docs/com/google/common/base/CharMatcher.html#javaIsoControl--)
+* [`javaLowerCase()`](http://google.github.io/guava/releases/snapshot/api/docs/com/google/common/base/CharMatcher.html#javaLowerCase--)
+* [`javaUpperCase()`](http://google.github.io/guava/releases/snapshot/api/docs/com/google/common/base/CharMatcher.html#javaUpperCase--)
+* [`ascii()`](http://google.github.io/guava/releases/snapshot/api/docs/com/google/common/base/CharMatcher.html#ascii--)
+* [`singleWidth()`](http://google.github.io/guava/releases/snapshot/api/docs/com/google/common/base/CharMatcher.html#singleWidth--)
 
 其它一些常用的获得一个 `CharMatcher` 的方法包括：
 
 方法|描述
 ---|---
-[anyOf(CharSequence)](http://google.github.io/guava/releases/snapshot/api/docs/com/google/common/base/CharMatcher.html#anyOf-java.lang.CharSequence-)|表明你想匹配的所有字符，例如：`CharMatcher.anyOf("aeiou")` 可以匹配小写元音字母。
-[is(char)](http://google.github.io/guava/releases/snapshot/api/docs/com/google/common/base/CharMatcher.html#is-char-)| 表明你想匹配的一个确定的字符。
-[inRange(char, char)](http://google.github.io/guava/releases/snapshot/api/docs/com/google/common/base/CharMatcher.html#inRange-char-char-)| 表明你想匹配的一个字符范围，例如：`CharMatcher.inRange('a', 'z')`。
+[`anyOf(CharSequence)`](http://google.github.io/guava/releases/snapshot/api/docs/com/google/common/base/CharMatcher.html#anyOf-java.lang.CharSequence-)|表明你想匹配的所有字符，例如：`CharMatcher.anyOf("aeiou")` 可以匹配小写元音字母。
+[`is(char)`](http://google.github.io/guava/releases/snapshot/api/docs/com/google/common/base/CharMatcher.html#is-char-)| 表明你想匹配的一个确定的字符。
+[`inRange(char, char)`](http://google.github.io/guava/releases/snapshot/api/docs/com/google/common/base/CharMatcher.html#inRange-char-char-)| 表明你想匹配的一个字符范围，例如：`CharMatcher.inRange('a', 'z')`。
 
-此外，`CharMatcher` 还有这些方法：[ negate()](http://google.github.io/guava/releases/snapshot/api/docs/com/google/common/base/CharMatcher.html#negate--)、[and(CharMatcher)](http://google.github.io/guava/releases/snapshot/api/docs/com/google/common/base/CharMatcher.html#and-com.google.common.base.CharMatcher-)、[or(CharMatcher)](http://google.github.io/guava/releases/snapshot/api/docs/com/google/common/base/CharMatcher.html#or-com.google.common.base.CharMatcher-)。这些方法可以为 `CharMatcher` 提供方便的布尔运算。
+此外，`CharMatcher` 还有这些方法：[`negate()`](http://google.github.io/guava/releases/snapshot/api/docs/com/google/common/base/CharMatcher.html#negate--)、[`and(CharMatcher)`](http://google.github.io/guava/releases/snapshot/api/docs/com/google/common/base/CharMatcher.html#and-com.google.common.base.CharMatcher-)、[`or(CharMatcher)`](http://google.github.io/guava/releases/snapshot/api/docs/com/google/common/base/CharMatcher.html#or-com.google.common.base.CharMatcher-)。这些方法可以为 `CharMatcher` 提供方便的布尔运算。
 
 ## 使用 CharMatcher
 `CharMatcher` 提供了很多方法来对匹配的字符序列 `CharSequence` 进行操作。以下只是列出了一些常用方法。
