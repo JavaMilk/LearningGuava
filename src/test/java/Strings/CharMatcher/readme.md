@@ -49,6 +49,7 @@
 * [singleWidth()](http://google.github.io/guava/releases/snapshot/api/docs/com/google/common/base/CharMatcher.html#singleWidth--)
 
 其它一些常用的获得一个 `CharMatcher` 的方法包括：
+
 方法|描述
 ---|---
 [anyOf(CharSequence)](http://google.github.io/guava/releases/snapshot/api/docs/com/google/common/base/CharMatcher.html#anyOf-java.lang.CharSequence-)|表明你想匹配的所有字符，例如：`CharMatcher.anyOf("aeiou")` 可以匹配小写元音字母。
@@ -59,7 +60,9 @@
 
 ## 使用 CharMatcher
 `CharMatcher` 提供了很多方法来对匹配的字符序列 `CharSequence` 进行操作。以下只是列出了一些常用方法。
+
 方法|描述
+---|---
 [`collapseFrom(CharSequence, char)`](http://google.github.io/guava/releases/snapshot/api/docs/com/google/common/base/CharMatcher.html#collapseFrom-java.lang.CharSequence-char-)| 将一组连续匹配的字符串替换为一个指定的字符。例如：`WHITESPACE.collapseFrom(string, ' ')` 可以将连续的空字符串替换为单个字符。
 [`matchesAllOf(CharSequence)`](http://google.github.io/guava/releases/snapshot/api/docs/com/google/common/base/CharMatcher.html#matchesAllOf-java.lang.CharSequence-)|测试字符序列是否全部匹配。例如：`ASCII.matchesAllOf(string)` 可以测试字符是否全部是 ASCII。
 [`removeFrom(CharSequence)`](http://google.github.io/guava/releases/snapshot/api/docs/com/google/common/base/CharMatcher.html#removeFrom-java.lang.CharSequence-)|将匹配的字符序列移除
