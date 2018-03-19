@@ -18,7 +18,12 @@
 
 # 已完成部分
 # String 
-* [Joiner](https://github.com/JavaMilk/LearningGuava/tree/master/src/test/java/Strings/Joiner) 感谢 [mindawei](https://github.com/mindawei)
-* [Splitter](https://github.com/JavaMilk/LearningGuava/tree/master/src/test/java/Strings/Splitter) 感谢 [mindawei](https://github.com/mindawei)
-* [CharMatcher](https://github.com/JavaMilk/LearningGuava/tree/master/src/test/java/Strings/CharMatcher) 感谢 [mindawei](https://github.com/mindawei)
+* [Joiner](https://github.com/JavaMilk/LearningGuava/tree/master/src/test/java/Strings/Joiner) 
+* [Splitter](https://github.com/JavaMilk/LearningGuava/tree/master/src/test/java/Strings/Splitter) 
+* [CharMatcher](https://github.com/JavaMilk/LearningGuava/tree/master/src/test/java/Strings/CharMatcher) 
+* [Charsets](https://github.com/JavaMilk/LearningGuava/tree/master/src/test/java/Strings/Charsets) 
+* [CaseFormat](https://github.com/JavaMilk/LearningGuava/tree/master/src/test/java/Strings/CaseFormat) 
+
+
+
 
