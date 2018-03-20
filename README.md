@@ -17,6 +17,10 @@
 # 文档认领列表
 
 # 已完成部分
+
+# Concurrency
+* [ListenableFuture](https://github.com/JavaMilk/LearningGuava/tree/master/src/test/java/Concurrency/ListenableFuture) 
+
 # String 
 * [Joiner](https://github.com/JavaMilk/LearningGuava/tree/master/src/test/java/Strings/Joiner) 
 * [Splitter](https://github.com/JavaMilk/LearningGuava/tree/master/src/test/java/Strings/Splitter) 
