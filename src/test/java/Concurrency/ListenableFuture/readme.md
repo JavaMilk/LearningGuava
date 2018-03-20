@@ -42,11 +42,11 @@ Futures.addCallback(explosion, new FutureCallback<Explosion>() {
 });
 ```
  
-如果你想从一个基于 [`FutureTask`](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/FutureTask.html) 的 API 转换过来，Guava 提供了 `[ListenableFutureTask.create(Callable<V>)](https://google.github.io/guava/releases/snapshot/api/docs/com/google/common/util/concurrent/ListenableFutureTask.html#create-java.util.concurrent.Callable-)` 和 `[ ListenableFutureTask.create(Runnable, V)](https://google.github.io/guava/releases/snapshot/api/docs/com/google/common/util/concurrent/ListenableFutureTask.html#create-java.lang.Runnable-V-)`。和 JDK 不一样，`ListenableFutureTask` 并不意味着可以直接扩展。
+如果你想从一个基于 [`FutureTask`](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/FutureTask.html) 的 API 转换过来，Guava 提供了 [`ListenableFutureTask.create(Callable<V>)`](https://google.github.io/guava/releases/snapshot/api/docs/com/google/common/util/concurrent/ListenableFutureTask.html#create-java.util.concurrent.Callable-) 和 [`ListenableFutureTask.create(Runnable, V)`](https://google.github.io/guava/releases/snapshot/api/docs/com/google/common/util/concurrent/ListenableFutureTask.html#create-java.lang.Runnable-V-)`。和 JDK 不一样，`ListenableFutureTask` 并不意味着可以直接扩展。
 
-如果你更喜欢可以设置 future 值的抽象，而不是实现一个方法来计算结果，那么可以考虑直接扩展 `[AbstractFuture<V>](https://google.github.io/guava/releases/snapshot/api/docs/com/google/common/util/concurrent/AbstractFuture.html)` 或者 `[SettableFuture](https://google.github.io/guava/releases/snapshot/api/docs/com/google/common/util/concurrent/SettableFuture.html)`。
+如果你更喜欢可以设置 future 值的抽象，而不是实现一个方法来计算结果，那么可以考虑直接扩展 [`AbstractFuture<V>`](https://google.github.io/guava/releases/snapshot/api/docs/com/google/common/util/concurrent/AbstractFuture.html) 或者 [`SettableFuture`](https://google.github.io/guava/releases/snapshot/api/docs/com/google/common/util/concurrent/SettableFuture.html)。
 
-如果你一定要将一个基于 `Future` 的 API 转换为基于 `ListenableFuture` 的话，你不得不选择重量级的 `[JdkFutureAdapters.listenInPoolThread(Future)](https://google.github.io/guava/releases/snapshot/api/docs/com/google/common/util/concurrent/JdkFutureAdapters.html)` 来实现从 `Future` 到 `ListenableFuture` 的转换。所以，尽可能地使用 `ListenableFuture`。
+如果你一定要将一个基于 `Future` 的 API 转换为基于 `ListenableFuture` 的话，你不得不选择重量级的 [`JdkFutureAdapters.listenInPoolThread(Future)`](https://google.github.io/guava/releases/snapshot/api/docs/com/google/common/util/concurrent/JdkFutureAdapters.html) 来实现从 `Future` 到 `ListenableFuture` 的转换。所以，尽可能地使用 `ListenableFuture`。
 
 ## 应用
 使用 `ListenableFuture` 一个最重要的原因就是：可以基于他实现负责的异步执行链。如下所示：
