@@ -18,6 +18,10 @@
 
 # 已完成部分
 
+# Collections
+
+* [Immutable collections](https://github.com/google/guava/wiki/ImmutableCollectionsExplained)
+
 # Concurrency
 * [ListenableFuture](https://github.com/JavaMilk/LearningGuava/tree/master/src/test/java/Concurrency/ListenableFuture) 
 
