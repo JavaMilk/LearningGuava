@@ -15,22 +15,22 @@
 * readme.md 文件中主要是 翻译官方文档的示例，以及加上一些源码分析（参考别人的部分指明出处）。
 
 # 文档认领列表
+* [hujianhong](https://github.com/hujianhong) 认领 New collection types 下的 Multiset
 
 # 已完成部分
 
 # Collections
-
-* [Immutable collections](https://github.com/google/guava/wiki/ImmutableCollectionsExplained)
+* [Immutable collections](https://github.com/JavaMilk/LearningGuava/tree/master/src/test/java/Collections/ImmutableCollections) 感谢 [hujianhong](https://github.com/hujianhong)
 
 # Concurrency
-* [ListenableFuture](https://github.com/JavaMilk/LearningGuava/tree/master/src/test/java/Concurrency/ListenableFuture) 
+* [ListenableFuture](https://github.com/JavaMilk/LearningGuava/tree/master/src/test/java/Concurrency/ListenableFuture) 感谢 [mindawei](https://github.com/mindawei)
 
 # String 
-* [Joiner](https://github.com/JavaMilk/LearningGuava/tree/master/src/test/java/Strings/Joiner) 
-* [Splitter](https://github.com/JavaMilk/LearningGuava/tree/master/src/test/java/Strings/Splitter) 
-* [CharMatcher](https://github.com/JavaMilk/LearningGuava/tree/master/src/test/java/Strings/CharMatcher) 
-* [Charsets](https://github.com/JavaMilk/LearningGuava/tree/master/src/test/java/Strings/Charsets) 
-* [CaseFormat](https://github.com/JavaMilk/LearningGuava/tree/master/src/test/java/Strings/CaseFormat) 
+* [Joiner](https://github.com/JavaMilk/LearningGuava/tree/master/src/test/java/Strings/Joiner) 感谢 [mindawei](https://github.com/mindawei)
+* [Splitter](https://github.com/JavaMilk/LearningGuava/tree/master/src/test/java/Strings/Splitter) 感谢 [mindawei](https://github.com/mindawei)
+* [CharMatcher](https://github.com/JavaMilk/LearningGuava/tree/master/src/test/java/Strings/CharMatcher) 感谢 [mindawei](https://github.com/mindawei)
+* [Charsets](https://github.com/JavaMilk/LearningGuava/tree/master/src/test/java/Strings/Charsets) 感谢 [mindawei](https://github.com/mindawei)
+* [CaseFormat](https://github.com/JavaMilk/LearningGuava/tree/master/src/test/java/Strings/CaseFormat) 感谢 [mindawei](https://github.com/mindawei)
 
 
 
